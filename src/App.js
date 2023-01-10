@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
-import HomePage from "./home/HomePage";
+import HomePages from "./home/HomePage";
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' element={<HomePage/>} />
+          <Route path='/' element={<HomePages/>} />
         </Routes>
       </Router>
     </>

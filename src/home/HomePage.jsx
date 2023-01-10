@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import Homes from "../components/homes/Homes";
+import Upcomming from "../components/upcomming/Upcomming";
+import { upcome, latest, recommended } from '../dummyData' 
+import Trending from '../components/trending/Trending' 
 
 
-
-const HomePage = () => {
-
+const HomePages = () => {
+  const [items] = useState(upcome)
+  const [item] = useState(latest)
+  const [rec] = useState(recommended)
   return (
     <>
-     <div>hello</div>
+      <Homes />
+      <Upcomming items={items} title='Upcoming Movies'/>
+      <Upcomming items={item} title='Latest Movies'/>
+      <Trending />
+      <Upcomming items={rec} title='Recommended Movies'/>
     </>
   );
 };
 
-export default HomePage;
+export default HomePages;
