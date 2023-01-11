@@ -44,7 +44,7 @@ const SinglePage = () => {
           <Upcomming items={rec} title='Recommended Movies' />
         </>
       ) : (
-        "no"
+        <h3>No movie exist with this id</h3>
       )}
     </>
   )
